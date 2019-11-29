@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.0)
 
 #-----------------------------------------------------------------------------#
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_CXX_COMPILER avr-g++)
+set(CMAKE_C_COMPILER avr-gcc)
+#-----------------------------------------------------------------------------#
 
 set(TARGET crc32)
 
