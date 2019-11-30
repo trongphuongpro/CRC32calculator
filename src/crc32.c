@@ -32,7 +32,7 @@ void crc32_init() {
 
 crc32_t crc32_compute(const void *data, uint32_t len) {
 	uint8_t *msg = (uint8_t*)data;
-	crc32_t remainder = ~0U;
+	crc32_t remainder = 0xFFFFFFFF;
 	
 	for (uint32_t i = 0; i < len; i++) {
 		remainder = crc32Table[msg[i] ^ (remainder & 0xFF)] ^ (remainder >> 8);
