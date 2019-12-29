@@ -1,7 +1,19 @@
+/** 
+ * @file crc32.c
+ * @brief Function implementation for computing CRC-32 checksum
+ * @author Nguyen Trong Phuong (aka trongphuongpro)
+ * @date 2019 Dec 28
+ */
+
+
 #include <stdint.h>
 #include <stdlib.h>
 #include <string.h>
 #include "crc32.h"
+
+#define CRC32POLY			0x04C11DB7
+#define CRC32POLY_REVERSE	0xEDB88320
+
 
 static crc32_t crc32Table[256];
 
