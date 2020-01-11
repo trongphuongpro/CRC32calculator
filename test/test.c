@@ -4,8 +4,6 @@
 
 
 int main() {
-	crc32_init();
-
 	const char *data[5] = {"codelungtung.com", "nguyentrongphuong", 
 					"mr.trongphuongpro@gmail.com", "ntppro", "trongphuongpro"};
 

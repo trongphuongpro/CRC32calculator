@@ -23,13 +23,6 @@ typedef uint32_t crc32_t;
 
 
 /** 
- * @brief initialize a table containing 255 predefined CRC-32 values
- * @return nothing.
- */
-void crc32_init(void);
-
-
-/** 
  * @brief compute CRC-32 checksum value for a byte array.
  * @param data pointer to an array;
  * @param len the length of data in byte.
@@ -60,13 +53,13 @@ int crc32_check(const void* data, uint32_t len);
 
 
 /** 
- * @brief reflect one byte data.
+ * @brief reverse one byte data.
  *
  * example: 0b10100011 --> 0b11000101
  * @param data one byte data.
- * @return reflected data byte.
+ * @return reversed data byte.
  */
-uint8_t reflect(uint8_t data);
+uint8_t reverse(uint8_t data);
 
 #ifdef __cplusplus
 }
