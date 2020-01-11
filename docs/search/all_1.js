@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['reflect_8',['reflect',['../crc32_8h.html#a0095c9bb371b0a0129aaeb0f5710ce10',1,'reflect(uint8_t data):&#160;crc32.c'],['../crc32_8c.html#acc86c1fd6ab17bc1a4d0762af6881128',1,'reflect(uint8_t number):&#160;crc32.c']]]
+  ['reverse_7',['reverse',['../crc32_8h.html#ab2d3d4e8fd97f6b58185845d08c7b6be',1,'reverse(uint8_t data):&#160;crc32.c'],['../crc32_8c.html#a9abea887f27581b0aee2daa636cbbaa8',1,'reverse(uint8_t number):&#160;crc32.c']]]
 ];
