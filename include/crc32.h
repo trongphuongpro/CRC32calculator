@@ -32,6 +32,16 @@ crc32_t crc32_compute(const void* data, uint32_t len);
 
 
 /** 
+ * @brief compute CRC-32 checksum value for 2 separated data arrays.
+ * @param checksum existing checksum value.
+ * @param data pointer to new data array.
+ * @param len the length of new data in byte.
+ * @return CRC-32 checksum value.
+ */
+crc32_t crc32_concat(crc32_t checksum, const void* data, uint32_t len);
+
+
+/** 
  * @brief check the accuracy of computed CRC-32 checksum value.
  * @param data pointer to an array;
  * @param len the length of data in byte;
