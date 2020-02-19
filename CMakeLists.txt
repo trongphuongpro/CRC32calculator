@@ -8,7 +8,7 @@ set(CMAKE_C_COMPILER avr-gcc)
 
 set(TARGET crc32)
 
-add_library(${TARGET} STATIC src/crc32.c)
+add_library(${TARGET} STATIC src/crc32_atmega.c)
 target_include_directories(${TARGET} PUBLIC include)
 
 #-----------------------------------------------------------------------------#

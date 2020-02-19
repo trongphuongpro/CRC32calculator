@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.0)
 #-----------------------------------------------------------------------------#
 
 set(TARGET testbench)
-set(SOURCES test.c ../src/crc32.c)
+set(SOURCES test.c ../src/crc32_atmega.c)
 add_executable(${TARGET} ${SOURCES})
 target_include_directories(${TARGET} PUBLIC ../include)
 

@@ -1,6 +1,6 @@
 /** 
  * @file crc32.h
- * @brief Function prototypes for computing CRC-32 checksum for AVR MCUs.
+ * @brief Function prototypes for computing CRC-32 checksum.
  * @author Nguyen Trong Phuong (aka trongphuongpro)
  * @date 2019 Dec 28
  */
