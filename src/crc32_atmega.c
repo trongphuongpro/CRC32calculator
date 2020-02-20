@@ -7,6 +7,7 @@
 
 #include <stdlib.h>
 #include <string.h>
+#include <avr/io.h>
 #include <avr/pgmspace.h>
 #include "crc32.h"
 
@@ -71,7 +72,7 @@ uint8_t reverse(uint8_t number) {
 
 crc32_t crc32_compute(const void *data, uint32_t len) {
 	uint8_t *msg = (uint8_t*)data;
-	crc32_t remainder = 0xFFFFFFFF;
+	crc32_t remainder = ~0UL;
 	crc32_t hash;
 
 	for (uint32_t i = 0; i < len; i++) {
