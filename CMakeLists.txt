@@ -4,14 +4,14 @@ set(TARGET crc32)
 
 #-----------------------------------------------------------------------------#
 
-if (FAMILY STREQUAL AVR)
+if (SERIES STREQUAL ATMEGA)
 	add_library(${TARGET} STATIC src/crc32_atmega.c)
 
-elseif (FAMILY STREQUAL TIVA)
+elseif (SERIES STREQUAL TIVA)
 	add_library(${TARGET} STATIC src/crc32_tiva.c)
 
 else()
-	message(">> Failure due to missing FAMILY.")
+	message(">> Failure due to missing SERIES.")
 
 endif()
 
@@ -19,7 +19,7 @@ target_include_directories(${TARGET} PUBLIC include)
 
 #-----------------------------------------------------------------------------#
 
-if (FAMILY STREQUAL AVR)
+if (SERIES STREQUAL ATMEGA)
 	target_compile_options(${TARGET} PUBLIC -mmcu=${MCU}
 											-std=gnu11
 											-O2
@@ -31,7 +31,7 @@ if (FAMILY STREQUAL AVR)
 
 #-----------------------------------------------------------------------------#
 
-elseif (FAMILY STREQUAL TIVA)
+elseif (SERIES STREQUAL TIVA)
 
 	target_compile_options(${TARGET} PUBLIC -mthumb
 											${CPU}
@@ -54,6 +54,6 @@ elseif (FAMILY STREQUAL TIVA)
 #-----------------------------------------------------------------------------#
 
 else()
-	message(">> Failure due to missing FAMILY.")
+	message(">> Failure due to missing SERIES.")
 
 endif()
