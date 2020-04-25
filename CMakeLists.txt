@@ -4,7 +4,7 @@ set(TARGET crc32)
 
 #-----------------------------------------------------------------------------#
 
-if (SERIES STREQUAL ATMEGA)
+if (SERIES STREQUAL AVR)
 	add_library(${TARGET} STATIC src/crc32_atmega.c)
 
 elseif (SERIES STREQUAL TIVA)
@@ -19,7 +19,7 @@ target_include_directories(${TARGET} PUBLIC include)
 
 #-----------------------------------------------------------------------------#
 
-if (SERIES STREQUAL ATMEGA)
+if (SERIES STREQUAL AVR)
 	target_compile_options(${TARGET} PUBLIC -mmcu=${MCU}
 											-std=gnu11
 											-O2
